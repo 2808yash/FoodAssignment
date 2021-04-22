@@ -11,7 +11,7 @@
 	        $password = $_POST['password'];
 
 
-	        $sql="insert into q7uleFYUor.customers (first_name, last_name, email, preference, contact_number, password) values ('$first_name', '$last_name', '$email', '$preference', '$contact_number', '$password')";
+	        $sql="insert into customers (first_name, last_name, email, preference, contact_number, password) values ('$first_name', '$last_name', '$email', '$preference', '$contact_number', '$password')";
 	       
 	         if($conn->query($sql)===TRUE){
 	        	echo "Data inserted successfully.Please login to continue !!";
