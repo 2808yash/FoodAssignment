@@ -19,6 +19,7 @@
 	        }
 	        else
 	        	echo "error occured";
+			$conn->close();
 
     	}
 	}
