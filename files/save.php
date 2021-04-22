@@ -12,8 +12,8 @@
 
 
 	        $sql="insert into customers (first_name, last_name, email, preference, contact_number, password) values ('$first_name', '$last_name', '$email', '$preference', '$contact_number', '$password')";
-	       
-	         if($conn->query($sql)===TRUE){
+	        $result=$conn->query($sql);
+	        if($result){
 	        	echo "Data inserted successfully.Please login to continue !!";
 	        	header( "refresh:1; url=../user-login.php" );
 	        }
