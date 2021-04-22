@@ -1,7 +1,7 @@
 <?php 
 	require 'connection.php';
 	error_reporting(E_ERROR | E_PARSE);
-    session_start();
+        session_start();
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		if(isset($_POST['userSigninBtn']) && isset($_POST['email']) && isset($_POST['password'])){
 
