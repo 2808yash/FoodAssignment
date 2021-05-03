@@ -38,7 +38,7 @@
 		    <input type="password" class="form-control" id="res_password" name="res_password" required/>
 		  </div>
 		  <button type="submit" name="resSigninBtn" class="btn btn-success">Sign in</button>
-		   <span>Don't have account? <a class="text-danger" href="user-signup.php">Sign up</a></span>
+		   <span>Don't have account? <a class="text-danger" href="restaurant-signup.php">Sign up</a></span>
 		</form>
 	</div>	
 </body>
