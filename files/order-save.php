@@ -11,7 +11,7 @@
 	else {
 		header('location:../welcome-user.php');
 		if ($_SERVER["REQUEST_METHOD"] == "POST"){
-			if(isset($_POST['orderBtn']) && isset($_POST['payment_type']) &&isset($_POST['total_price']) && isset($_POST['address']) && isset($_POST['mobile_number']) && isset($_POST['res_id'])){
+			if(isset($_POST['orderBtn']) && isset($_POST['payment_type']) &&isset($_POST['total_price']) && isset($_POST['address']) && isset($_POST['mobile_number']) && isset($_POST['res_id']) && isset($_POST['item_name'])){
 		        $user_id = $_SESSION['custid'];
 		        $payment_type = $_POST['payment_type'];
 		        $address = $_POST['address'];
@@ -19,8 +19,9 @@
 		        $date = date('Y/m/d H:i:s');
 		        $total_price = $_POST['total_price'];
 		        $res_id = $_POST['res_id'];
+                                  $oname= $_POST['item_name'];
 		        
-		        $sql="insert into orders (user_id, res_id, payment_type, address, mobile, date, total) values ('$user_id', '$res_id', '$payment_type', '$address', '$mobile_number', '$date', '$total_price')";
+		        $sql="insert into orders (user_id, res_id, payment_type, address, mobile, date, total, order_name) values ('$user_id', '$res_id', '$payment_type', '$address', '$mobile_number', '$date', '$total_price', '$oname')";
 		        $result=$conn->query($sql);
 	    	}
 		}
