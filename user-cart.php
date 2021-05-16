@@ -12,7 +12,7 @@
 <!DOCTYPE html> 
 <html>
 <head>
-	<title>FoodShala</title>
+	<title>OrderNOW</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -43,7 +43,7 @@
 <body>
 
 	<!-- navbar -->
-	<nav class="navbar navbar-inverse navbar-fixed-top" style="font-size: 16px;">
+	<nav class="navbar navbar-inverse  navbar-fixed-top" style="font-size: 16px;background-color:rgba(230, 126, 34);border:0 solid white;">
 	  <div class="container">
 	    <div class="navbar-header">
 	    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -51,7 +51,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span> 
 		    </button>
-	      <a class="navbar-brand active" href="welcome-user.php" style="font-size: 18px;">FoodShala</a>
+	      <a class="navbar-brand active" href="welcome-user.php" style="font-size: 18px;color:white">OrderNOW</a>
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	      <ul class="nav navbar-nav navbar-right">
@@ -93,26 +93,28 @@
 						    <div class="card-body">
 						    	<a class="pull-right btn btn-sm btn-danger remove-item" href="files/delete.php?id=<?php echo $row['id'];?>">remove item</a>
 						    	<div class="card-text pull-right" style="margin-top: 10px;"><?php echo '₹'.$row['item_price']; ?> x <?php echo $row['item_quantity']; ?> = <?php echo '₹'.$row['total_price']; ?></div>
-						        <h4 class="card-title"><?php echo ucwords($row['item_name']); ?></h4>
+						        <h4 class="card-title" style="color:rgba(230, 126, 34);"><?php echo ucwords($row['item_name']); ?></h4>
 
 						    </div>
 						</div><hr>	
 	    	<?php 
 	    		$sum = $sum+$row['total_price'];
 	    		$res_id = $row['res_id'];
+                                       $item_name= $row['item_name'];
 	    	} ?>
 
 	    	<?php 
 	    		if($sum > 0){ ?>
-	    			<div class="total-cart-price pull-right">Total Price = ₹<?php echo $sum; ?></div>
+	    			<div class="total-cart-price pull-right" style="color:rgba(230, 126, 34);">Total Price = ₹<?php echo $sum; ?></div>
 	    	<?php }else{ ?>
-	    		<p class="text-center">No items added in the cart!!</p>
+	    		<p class="text-center" style="color:rgba(230, 126, 34);">No items added in the cart!!</p>
 	    	<?php } ?>
 	    	<br><br>
 	    		
 	    	<form action="place-order.php" method="post">
 	    		<input type="hidden" name="cart_price" value="<?php echo $sum; ?>">
 	    		<input type="hidden" name="res_id" value="<?php echo $res_id; ?>">
+                                        <input type="hidden" name="item_name" value="<?php echo $item_name; ?>">
 	    		<button class="btn btn-success pull-right">CHECKOUT <i class="fas fa-arrow-right"></i></button>
 	    	</form>
 	    	
