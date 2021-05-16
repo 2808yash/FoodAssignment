@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>FoodShala</title>
+	<title>OrderNOW</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -36,7 +36,7 @@
 <body>
 
 	<!-- navbar -->
-	<nav class="navbar navbar-inverse navbar-fixed-top" style="font-size: 16px;">
+	<nav class="navbar navbar-inverse  navbar-fixed-top" style="font-size: 16px;background-color:rgba(230, 126, 34);border:0 solid white;">
 	  <div class="container">
 	    <div class="navbar-header">
 	    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -44,7 +44,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span> 
 		    </button>
-	      <a class="navbar-brand active" href="welcome-restaurant.php" style="font-size: 18px;">FoodShala - for restaurants</a>
+	      <a class="navbar-brand active" href="welcome-restaurant.php" style="font-size: 18px;color:white">OrderNOW - for restaurants</a>
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	      <ul class="nav navbar-nav navbar-right">
@@ -85,7 +85,8 @@
 						    	<div class="card-text">Status - <?php echo $row['status']; ?></div>
 						        <div class="card-text">Price - <?php echo $row['total']; ?></div>
 						        <div class="card-text">Mobile - <?php echo $row['mobile']; ?></div>
-						        <div class="card-text">Date - <?php echo $row['date']; ?></div>
+						        <div class="card-text">Date - <?php echo $row['date'];?></div>
+                                                                                      <div class="card-text">Order - <?php echo $row['order_name'];?></div>
 						    </div>
 						</div><hr>
 	        <?php } ?>
