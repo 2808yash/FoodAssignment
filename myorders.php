@@ -12,7 +12,7 @@
 <!DOCTYPE html> 
 <html>
 <head>
-	<title>FoodShala</title>
+	<title>OrderNOW</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -43,7 +43,7 @@
 <body>
 
 	<!-- navbar -->
-	<nav class="navbar navbar-inverse navbar-fixed-top" style="font-size: 16px;">
+	<nav class="navbar navbar-inverse  navbar-fixed-top" style="font-size: 16px;background-color:rgba(230, 126, 34);border:0 solid white;">
 	  <div class="container">
 	    <div class="navbar-header">
 	    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -51,7 +51,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span> 
 		    </button>
-	      <a class="navbar-brand active" href="welcome-user.php" style="font-size: 18px;">FoodShala</a>
+	      <a class="navbar-brand active" href="welcome-user.php" style="font-size: 18px;color:white">OrderNOW</a>
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	      <ul class="nav navbar-nav navbar-right">
@@ -86,7 +86,7 @@
 	    ?>
 
 	    <div class="content"><br>
-	    	<h4>Past Orders</h4>
+	    	<h4  style=color:rgba(230,126,34);">Past Orders</h4>
 	    	<?php 
 	    		while($row = $result->fetch_assoc()){ ?>
             		    <div class="card">
