@@ -12,7 +12,7 @@
 <!DOCTYPE html> 
 <html>
 <head>
-	<title>FoodShala</title>
+	<title>OrderNOW</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -29,7 +29,7 @@
 <body>
 
 	<!-- navbar -->
-	<nav class="navbar navbar-inverse navbar-fixed-top" style="font-size: 16px;">
+	<nav class="navbar navbar-inverse  navbar-fixed-top" style="font-size: 16px;background-color:rgba(230, 126, 34);border:0 solid white;">
 	  <div class="container">
 	    <div class="navbar-header">
 	    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -37,7 +37,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span> 
 		    </button>
-	      <a class="navbar-brand active" href="welcome-user.php" style="font-size: 18px;">FoodShala</a>
+	      <a class="navbar-brand active" href="welcome-user.php" style="font-size: 18px;color:white">OrderNOW</a>
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	      <ul class="nav navbar-nav navbar-right">
@@ -62,23 +62,24 @@
 	    </div>
 
 	   	<div class="content col-md-8 col-md-offset-2"><br>
-	   		<h5 class="text-mute">Provide Order Details</h5>
+	   		<h5 class="text-mute" style="color:rgba(230, 126, 34);">Provide Order Details</h5>
 	   		<p class="caption">Provide required delivery and payment details.</p>
 	        <form action="files/order-save.php" method="post" enctype="multipart/form-data">
 	        	<input type="hidden" name="total_price" value="<?php echo $_POST['cart_price']; ?>">
 	        	<input type="hidden" name="res_id" value="<?php echo $_POST['res_id']; ?>">
+                          <input type="hidden" name="item_name" value="<?php echo $_POST['item_name']; ?>">
 	        	<div class="form-group">
-					<label for="sel1">Payment Type<b>*</b></label>
+					<label for="sel1" style="color:rgba(230, 126, 34);">Payment Type<b>*</b></label>
 					<select class="form-control" name="payment_type" id="sel1">
 					    <option>Cash on Delivery</option>
 					</select>
 				</div>
 				<div class="form-group">
-				    <label for="item_desc">Address<b>*</b></label>
+				    <label for="item_desc" style="color:rgba(230, 126, 34);">Address<b>*</b></label>
 				    <input type="text" class="form-control" id="address" name="address" required/>
 				</div>
 				<div class="form-group">
-				    <label for="item_price">Mobile Number<b>*</b></label>
+				    <label for="item_price" style="color:rgba(230, 126, 34);">Mobile Number<b>*</b></label>
 				    <input type="text" class="form-control" id="mobile_number" name="mobile_number" required/>
 				</div>
 				<div class="form-group">
